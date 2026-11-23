@@ -16,7 +16,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::872927006383:role/github-s3-deploy
+          role-to-assume: arn:aws:iam::872927006383:role/forGithub
           aws-region: ap-south-1
 
       - run: aws s3 sync . s3://deploytesting56 --delete --exclude ".git/*" --exclude ".github/*"
